@@ -12,6 +12,15 @@ class ApplicationController < Sinatra::Base
     def logged_in?
       !!session[:email] # double negation to determine truthiness of object
     end
+
+    def login(email)
+      session[:email] = email
+    end
+
+    def logout
+      session.clear
+    end
+
   end
 
 end
