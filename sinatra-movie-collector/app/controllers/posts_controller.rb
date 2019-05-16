@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       redirect "/login" # redirect if they aren't
     #
     else
-      "A edit post form" # render if they are
+      "An edit post form" # render if they are
     end
   end
 

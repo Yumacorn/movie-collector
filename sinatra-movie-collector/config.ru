@@ -11,3 +11,6 @@ use SessionsController
 use PostsController
 use UsersController
 run ApplicationController
+
+# If shotgun fails to stop server and continues to listen
+# ps aux | grep ruby => kill -9 'pid'
