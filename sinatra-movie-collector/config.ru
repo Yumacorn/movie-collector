@@ -9,6 +9,3 @@ end
 use Rack::MethodOverride
 use SessionsController
 run ApplicationController
-
-#test comment A
-#test comment B
