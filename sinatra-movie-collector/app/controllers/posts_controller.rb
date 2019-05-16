@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       redirect "/login" # redirect if they aren't
     else
       if post = current_user.posts.find_by(params[:id])
-        "An edit post form #{current_user.id} is editing #{post.id}" # render if they are
+        "User ##{current_user.id} [#{current_user.email}] is editing post ##{post.id}" # render if they are
       else
         redirect '/posts'
       end
