@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   get '/posts/new' do
     #Check if user logged in
-    if !session[:email]
+    if !logged_in?
       redirect "/login" # redirect if they aren't
     #
     else
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   get '/posts/:id/edit' do
     #Check if user logged in
-    if !session[:email]
+    if !logged_in?
       redirect "/login" # redirect if they aren't
     #
     else
