@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
   end
 
   post '/sessions' do
-    raise params.inspect
+    session[:email] = params[:email]
+    redirect '/posts'
+  end
+
+  get '/logout' do
+    session.clear
   end
 end

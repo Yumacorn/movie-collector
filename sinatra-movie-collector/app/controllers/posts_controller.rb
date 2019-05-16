@@ -4,4 +4,23 @@ class PostsController < ApplicationController
     "You are logged in as #{session[:email]}"
   end
 
+  get 'posts/new' do
+    #Check if user logged in
+    if !session[:email]
+      redirect "/login" # redirect if they aren't
+    #
+    else
+      "A new post form" # render if they are
+    end
+  end
+
+  get 'posts/:id/edit' do
+    #Check if user logged in
+    if !session[:email]
+      redirect "/login" # redirect if they aren't
+    #
+    else
+      "A edit post form" # render if they are
+    end
+  end
 end
