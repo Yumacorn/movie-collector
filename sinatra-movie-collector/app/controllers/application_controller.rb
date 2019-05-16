@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
       !!session[:email] # double negation to determine truthiness of object
     end
 
-    def login(email)
+    def login(email, password)
       # check if user with email exists
       #if so, set the session
       if user = User.find_by(:email => email)
