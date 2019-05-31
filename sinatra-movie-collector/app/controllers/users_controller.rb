@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     if @user.save # if you try to save an invalid ActiveRecord object, you get false
       redirect '/login'
     else
+      binding.pry
       erb :"users/new.html" # render as opposed to redirect, render whenever currnet request has data we need. # redirect if data is not required
     end
   end
