@@ -31,6 +31,7 @@ class ApplicationController < Sinatra::Base
 
     def logout
       session.clear
+      puts "Logging Out..."
       redirect '/login'
     end
 

@@ -1,6 +1,6 @@
-<h1>Login</h1>
-
-<p>Welcome to Movie Collector! Please enter your login information below </p>
+<h1>Movie Database Collector</h1>
+<h3>Login</h3>
+<p>Please enter your login information below </p>
 <%= "Must include email and password. Please try again" if @user && @user.errors.any? %>
 
 <form action="/sessions" method="POST">
