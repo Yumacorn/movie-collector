@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :first_name, :last_name, :zip_code
   has_secure_password
 
-  validates :email, :presence => true, uniqueness: true, uniqueness: { case_sensitive: false } # validating that email is present
+  validates :email, :presence => true, uniqueness: { case_sensitive: false } # validating that email is present
   validates :password, :presence => true
   validates :first_name, :presence => true
   validates :last_name, :presence => true
