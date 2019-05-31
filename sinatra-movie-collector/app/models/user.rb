@@ -3,5 +3,5 @@ class User < ActiveRecord::Base
 
   validates :email, :presence => true # validating that email is present
 
-  has_many :posts
+  has_many :movies
 end

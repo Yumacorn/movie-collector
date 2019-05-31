@@ -8,7 +8,7 @@ end
 
 use Rack::MethodOverride
 use SessionsController
-use PostsController
+use MoviesController
 use UsersController
 run ApplicationController
 

@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
   post '/sessions' do
     # login a user with this email
     login(params[:email], params[:password])
-    redirect '/posts'
+    redirect '/movies'
   end
 
   get '/logout' do
     logout
-    redirect '/posts'
+    redirect '/movies'
   end
 
 end
