@@ -12,5 +12,6 @@ use MoviesController
 use UsersController
 run ApplicationController
 
+# Ctrl + C or Ctrl + Z to force-stop Shotgun server
 # If shotgun fails to stop server and continues to listen
 # ps aux | grep ruby => kill -9 'pid'
