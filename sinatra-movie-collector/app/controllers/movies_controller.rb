@@ -1,7 +1,8 @@
-class MoviessController < ApplicationController
+class MoviesController < ApplicationController
 
   get '/movies' do
-    "You are logged in as #{session[:email]}"
+    # "You are logged in as #{session[:email]}"
+    erb :"movies/movies.html"
   end
 
   get '/movies/new' do

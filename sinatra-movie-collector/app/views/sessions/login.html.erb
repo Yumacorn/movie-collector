@@ -1,5 +1,7 @@
 <h1>Login</h1>
 
+<%= "Must include email and password. Please try again" if @user && @user.errors.any? %>
+
 <form action="/sessions" method="POST">
   <p>
     <label for="email">Email:</label>
