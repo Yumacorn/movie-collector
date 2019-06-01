@@ -2,22 +2,8 @@
 <h3>Currently logged in as: <%= session[:email] %> </h3>
 
 <form action="/logout" method="GET">
-  <p>
-    Not your account? <input type="submit" value="Sign Out">
-  </p>
+  <p>Not your account? <input type="submit" value="Sign Out"></p>
 </form>
+
 <h4>This is a list of Movie titles which you have viewed.</h4>
-<!-- # <%= "Must include email and password. Please try again" if @user && @user.errors.any? %> -->
-
-<!-- <form action="/sessions" method="POST">
-  <p>
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email"/>
-  </p>
-  <p>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password"/>
-  </p> -->
-
-  <!-- <input type="submit" /> -->
-<!-- </form> -->
+<%= current_user %>
