@@ -37,4 +37,13 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get '/' do
+    redirect '/index'
+  end
+
+  get '/index' do
+    @movies = Movie.all
+    erb :index
+  end
+
 end
