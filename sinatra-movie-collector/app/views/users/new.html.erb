@@ -1,16 +1,6 @@
 <h1>Signup</h1>
 
 <%= "Must include email and password. Please try again" if @user && @user.errors.any? %>
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-     <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
 
 <form action="/users" method="POST">
   <p>
