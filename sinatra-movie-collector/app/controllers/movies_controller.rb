@@ -5,13 +5,14 @@ class MoviesController < ApplicationController
     erb :"movies/movies.html"
   end
 
-  get '/movies/new' do
+  get '/movies/add' do
     #Check if user logged in
     if !logged_in?
       redirect "/login" # redirect if they aren't
     #
     else
-      "A new movie form" # render if they are
+      # "A new movie form"
+      erb :"movies/add.html" # render if they are
     end
   end
 
