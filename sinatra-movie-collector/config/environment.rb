@@ -7,3 +7,5 @@ ActiveRecord::Base.establish_connection(
   :database => "db/development.sqlite"
 )
 require_all 'app'
+
+# RAILS_ENV=development rake db:reset

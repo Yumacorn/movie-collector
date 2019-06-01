@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user.first_name = params[:first_name]
     @user.last_name = params[:last_name]
     @user.zip_code = params[:zip_code]
-
+    binding.pry
     if @user.save # if you try to save an invalid ActiveRecord object, you get false
       redirect '/login'
     else

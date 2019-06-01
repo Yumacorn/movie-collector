@@ -14,8 +14,6 @@ ActiveRecord::Schema.define(version: 2019_06_01_190913) do
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
-    t.string "genre"
-    t.integer "release_year"
   end
 
   create_table "users", force: :cascade do |t|
