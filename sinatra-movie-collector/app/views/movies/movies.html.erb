@@ -1,9 +1,12 @@
 <h1>Movies</h1>
-<h3>Currently logged in as: <%= session[:email] %> </h3>
+<h3>
+  Currently logged in as: <%= current_user.email %><br>
+  User ID #: <%= current_user.id %><br>
+</h3>
+
 
 <form action="/logout" method="GET">
   <p>Not your account? <input type="submit" value="Sign Out"></p>
 </form>
 
 <h4>This is a list of Movie titles which you have viewed.</h4>
-<%= current_user %>
