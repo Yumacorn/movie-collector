@@ -1,6 +1,6 @@
 <h1>Signup</h1>
 
-<%= "An error occured. Please try again" if @user && @user.errors.any? %>
+<%= "An error occured and could not be saved. Please see below and try again" if @user && @user.errors.any? %>
 
 <% if @user && @user.errors.any? %>
   <% @user.errors.full_messages.each do |msg| %>

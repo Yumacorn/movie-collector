@@ -1,5 +1,5 @@
 <h1>Add New Movie</h1>
-
+<%= "An error occured. Please try again" if @movie && @movie.errors.any? %>
 <% if @movie && @movie.errors.any? %>
   <% @movie.errors.full_messages.each do |msg| %>
     <ul> <%= msg %> </ul>
