@@ -5,6 +5,19 @@ class MoviesController < ApplicationController
     erb :"movies/movies.html"
   end
 
+  post '/movies' do
+    @movie = Movie.new
+    @movie.title = params[:title]
+    @movie.genre = params[:genre]
+    @movie.release_year = params[:release_year]
+
+    if @movie.save # if you try to save an invalid ActiveRecord object, you get false
+      redirect '/movies'
+    else
+      erb :"movies/add.html" # render as opposed to redirect, render whenever currnet request has data we need. # redirect if data is not required
+    end
+  end
+
   get '/movies/add' do
     #Check if user logged in
     if !logged_in?
