@@ -2,7 +2,6 @@ class MoviesController < ApplicationController
 
   get '/movies' do
     # "You are logged in as #{session[:email]}"
-    binding.pry
     erb :"movies/movies.html"
   end
 
