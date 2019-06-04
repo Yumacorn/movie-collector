@@ -11,15 +11,14 @@
 <h4>This is the current list of Movies which you have watched:</h4>
 <ul>
     <% @movies.each do |movie| %>
-        <li><%= movie.title %></li>
+        <li>
+          <%= movie.title %>
+          <a href="/movies/<%=movie.id %>/edit">Edit Movie</a>
+        </li>
     <% end %>
 </ul>
 
 <h4>Would you like to update your list of watched movies?</h4>
 <form action="/movies/add" method="GET">
   <p>Add to your list? <input type="submit" value="Add Movie"></p>
-</form>
-
-<form action="/remove" method="GET">
-  <p>Remove from your list? <input type="submit" value="Remove Movie"></p>
 </form>

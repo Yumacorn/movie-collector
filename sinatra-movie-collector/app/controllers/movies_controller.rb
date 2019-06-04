@@ -36,12 +36,13 @@ class MoviesController < ApplicationController
     if !logged_in?
       redirect "/login" # redirect if they aren't
     else
-      if movie = current_user.movies.find_by(params[:id])
-        "User ##{current_user.id} [#{current_user.email}] is editing movie ##{movie.id}" # render if they are
-      else
-        redirect '/movies'
-      end
+      @movie = current_user.movies.find(params[:id])
+      erb :"movies/edit.html"
     end
+  end
+
+  get '/movies/remove' do
+
   end
 
 end
