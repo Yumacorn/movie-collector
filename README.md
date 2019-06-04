@@ -7,19 +7,15 @@ Please see the Usage instructions below to begin!
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Find the repo from Github
 
 ```ruby
-gem 'teeshirt_saver'$$$$$
+https://github.com/Yumacorn/sinatra-controller-movie-collector.git
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install $$$$$teeshirt_saver
+    $ git clone https://github.com/Yumacorn/sinatra-controller-movie-collector.git
 
 ## Usage
 
