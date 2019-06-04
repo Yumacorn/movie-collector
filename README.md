@@ -22,8 +22,9 @@ And then execute:
 In order to run this repo:
   1. Run 'bundle install' to load gemfile
   2. Change directory to appropriate directory below:
+  ```ruby
   $ cd sinatra-controller-movie-collector
-
+  ```
   $ cd sinatra-movie-collector
   3. Enjoy your new Sinatra Movie Collector Program!
 
