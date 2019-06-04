@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessor :first_name, :last_name, :zip_code
+  # attr_accessor :first_name, :last_name, :zip_code
   has_secure_password
 
   validates :email, :presence => true, uniqueness: { case_sensitive: false } # validating that email is present

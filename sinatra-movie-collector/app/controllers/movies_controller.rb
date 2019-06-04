@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     @movie.title = params[:title]
     @movie.genre = params[:genre]
     @movie.release_year = params[:release_year]
-
+    binding.pry
     if @movie.save # if you try to save an invalid ActiveRecord object, you get false
       redirect '/movies'
     else
