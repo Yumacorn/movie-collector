@@ -1,4 +1,11 @@
+<p>Now editing "<%=@movie.title%>" movie </p>
+
 <form action="/movies/<%= @movie.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
     <input type="text" ...>
+</form>
+
+<form action="/movies/<%= @movie.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Movie">
 </form>
