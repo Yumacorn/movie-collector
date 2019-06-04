@@ -2,6 +2,8 @@ class MoviesController < ApplicationController
 
   get '/movies' do
     # "You are logged in as #{session[:email]}"
+
+    @movies = current_user.movies
     erb :"movies/movies.html"
   end
 
@@ -10,7 +12,7 @@ class MoviesController < ApplicationController
     @movie.title = params[:title]
     @movie.genre = params[:genre]
     @movie.release_year = params[:release_year]
-    binding.pry
+    @movie.user_id = current_user.id
     if @movie.save # if you try to save an invalid ActiveRecord object, you get false
       redirect '/movies'
     else

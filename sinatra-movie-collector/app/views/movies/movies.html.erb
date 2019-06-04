@@ -9,6 +9,11 @@
 </form>
 
 <h4>This is the current list of Movies which you have watched:</h4>
+<ul>
+    <% @movies.each do |movie| %>
+        <li><%= movie.title %></li>
+    <% end %>
+</ul>
 
 <h4>Would you like to update your list of watched movies?</h4>
 <form action="/movies/add" method="GET">
