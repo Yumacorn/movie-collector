@@ -41,12 +41,21 @@ class MoviesController < ApplicationController
 
   patch '/movies/:id' do #edit action
     @movie = Movie.find_by_id(params[:id])
+    @movie_original = @movie #save original settings
+    binding.pry
+
     @movie.title = params[:title]
     @movie.genre = params[:genre]
     @movie.release_year = params[:release_year]
-    @movie.save
-    erb :"movies/edit.html"
+    if !@movie.save # ActiveRecord validates true and allows save, render new edit page
+      @movie = @movie_original
+      binding.pry
+      erb :"movies/edit.html"
+    else
+      erb :"movies/movies.html"
+    end
   end
+
 
   delete '/movies/:id/delete' do #delete action
     @movie = Movie.find_by_id(params[:id])
