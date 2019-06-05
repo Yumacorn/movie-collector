@@ -1,6 +1,7 @@
 User.create(email: 'ron@hogwarts.com', password: 'bloke', first_name: 'Ronald', last_name: 'Weasley', zip_code: 90001)
 User.create(email: 'harry@hogwarts.com', password: 'sword', first_name: 'Harry', last_name: 'Potter', zip_code: 90002)
 User.create(email: 'hermione@hogwarts.com', password: 'spell', first_name: 'Hermione', last_name: 'Granger', zip_code: 90003)
+User.create(email: 'admin@gmail.com', password: 'pass', first_name: 'Jim', last_name: 'Ranger', zip_code: 01331)
 
 Movie.create(title: 'Harry Potter', genre: 'Fantasy', release_year: '1999', user_id: 1)
 Movie.create(title: 'Wall-E', genre: 'Adventure', release_year: '2009', user_id: 1)
@@ -8,3 +9,7 @@ Movie.create(title: 'Tomorrowland', genre: 'Action', release_year: '2012', user_
 Movie.create(title: 'Neville Longbottom', genre: 'Romance', release_year: '2002', user_id: 3)
 Movie.create(title: 'The History of Snape and Shanks', genre: 'Mystery', release_year: '2011', user_id: 3)
 Movie.create(title: 'Fly to Narnia', genre: 'Adventure', release_year: '1991', user_id: 3)
+Movie.create(title: 'Terminator', genre: 'Fantasy/Sci-Fi', release_year: '1984', user_id: 4)
+Movie.create(title: 'The Matrix', genre: 'Fantasy/Sci-Fi', release_year: '1999', user_id: 4)
+Movie.create(title: 'Office Space', genre: 'Romance/Comedy', release_year: '1999', user_id: 4)
+Movie.create(title: 'Good Burger', genre: 'Teen/Buddy', release_year: '1997', user_id: 4)
