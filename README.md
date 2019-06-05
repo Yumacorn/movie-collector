@@ -31,8 +31,15 @@ To begin, enter "shotgun" in the console
   1. Users can proceed to signup for a new account or login to an existing account
   2. Users can:
     - view all of the Movies they have recorded previously
+
     - adjust Movies they have already recorded
+
     - add new Movies they have seen to their collection
+
+Example login:
+email: 'admin@gmail.com'
+
+password: 'pass'
 
 If there are any issues with creating users or movie records, validation errors will be displayed to try again.
 
