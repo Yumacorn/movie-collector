@@ -5,3 +5,6 @@ User.create(email: 'hermione@hogwarts.com', password: 'spell', first_name: 'Herm
 Movie.create(title: 'Harry Potter', genre: 'Fantasy', release_year: '1999', user_id: 1)
 Movie.create(title: 'Wall-E', genre: 'Adventure', release_year: '2009', user_id: 1)
 Movie.create(title: 'Tomorrowland', genre: 'Action', release_year: '2012', user_id: 2)
+Movie.create(title: 'Neville Longbottom', genre: 'Romance', release_year: '2002', user_id: 3)
+Movie.create(title: 'The History of Snape and Shanks', genre: 'Mystery', release_year: '2011', user_id: 3)
+Movie.create(title: 'Fly to Narnia', genre: 'Adventure', release_year: '1991', user_id: 3)
