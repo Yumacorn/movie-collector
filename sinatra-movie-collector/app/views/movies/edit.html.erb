@@ -7,6 +7,13 @@
   Release Year: <%=@movie.release_year%><br>
 </p>
 
+<%= "An error occured. Please try again" if @movie && @movie.errors.any? %>
+<% if @movie && @movie.errors.any? %>
+  <% @movie.errors.full_messages.each do |msg| %>
+    <ul> <%= msg %> </ul>
+  <% end %>
+<% end %>
+
 <h4>Edit record:</h4>
 <form action="/movies/<%= @movie.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">

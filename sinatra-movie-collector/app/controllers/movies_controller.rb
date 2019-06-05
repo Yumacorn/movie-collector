@@ -41,19 +41,19 @@ class MoviesController < ApplicationController
 
   patch '/movies/:id' do #edit action
     @movie = Movie.find_by_id(params[:id])
-    @movie_original = @movie #save original settings
-    binding.pry
+    original_title = @movie.title #save original settings
+    original_genre = @movie.genre
+    original_release_year = @movie.release_year
 
     @movie.title = params[:title]
     @movie.genre = params[:genre]
     @movie.release_year = params[:release_year]
     if !@movie.save # ActiveRecord validates true and allows save, render new edit page
-      @movie = @movie_original
-      binding.pry
-      erb :"movies/edit.html"
-    else
-      erb :"movies/movies.html"
+      @movie.title = original_title
+      @movie.genre = original_genre
+      @movie.release_year = original_release_year
     end
+    erb :"movies/edit.html"
   end
 
 
