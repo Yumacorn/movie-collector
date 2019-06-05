@@ -42,12 +42,13 @@ class MoviesController < ApplicationController
   end
 
   patch '/movies/:id' do #edit action
-    @movies = Movie.find_by_id(params[:id])
-    @movies.title = params[:title]
-    @movies.genre = params[:genre]
-    @movies.release_year = params[:content]
-    @movies.save
-    redirect to "/movies/#{@movies.id}"
+    @movie = Movie.find_by_id(params[:id])
+    @movie.title = params[:title]
+    @movie.genre = params[:genre]
+    @movie.release_year = params[:release_year]
+    @movie.save
+    binding.pry
+    erb :"/movies/:id/edit" #!!!!!!!!
   end
 
   delete '/movies/:id/delete' do #delete action
