@@ -1,10 +1,13 @@
 <h1> Now editing</h1>
+
+<h4>Current record:</h4>
 <p>
-  Movie Title: <%=@movie.title%>
-  Genre: <%=@movie.genre%>
-  Release Year: <%=@movie.release_year%>
+  Movie Title: <%=@movie.title%><br>
+  Genre: <%=@movie.genre%><br>
+  Release Year: <%=@movie.release_year%><br>
 </p>
 
+<h4>Edit record:</h4>
 <form action="/movies/<%= @movie.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
     <label for="title">Title:</label>
@@ -18,10 +21,13 @@
     <input type="submit" value="Submit">
 </form>
 
-
-<br>
-<p>To remove this Movie from your database</p>
+<h4>Remove record:</h4>
 <form action="/movies/<%= @movie.id %>/delete" method="post">
+  <label for="delete">If you no longer wish to have this Movie in your database</label>
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete Movie">
+</form>
+
+<form action="/movies" method="GET">
+  <input type="submit" value="Return">
 </form>

@@ -47,7 +47,6 @@ class MoviesController < ApplicationController
     @movie.genre = params[:genre]
     @movie.release_year = params[:release_year]
     @movie.save
-    binding.pry
     erb :"movies/edit.html"
   end
 
