@@ -39,9 +39,9 @@ To begin, enter "shotgun" in the console
 
 Example login:
 
-email: 'admin@gmail.com'
+  email: 'admin@gmail.com'
 
-password: 'pass'
+  password: 'pass'
 
 If there are any issues with creating users or movie records, validation errors will be displayed to try again.
 

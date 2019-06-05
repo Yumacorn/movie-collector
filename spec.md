@@ -8,9 +8,9 @@ Specs:
 - [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User) - Movie model belongs_to User model
 - [x] Include user accounts with unique login attribute (username or email) - Added validation prior to saving User model that email has 'uniqueness'
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
-- [x ] Ensure that users can't modify content created by other users - Movie 
+- [x] Ensure that users can't modify content created by other users - Movie
 - [x] Include user input validations
-- [x ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new) - Validation feedback to user during invalid Signup, Movie edits, Movie creation
+- [x] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new) - Validation feedback to user during invalid Signup, Movie edits, Movie creation
 - [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
