@@ -41,9 +41,15 @@ class MoviesController < ApplicationController
     end
   end
 
-  # post '/movies/remove' do
-  #
-  # end
+  patch '/movies/:id' do #edit action
+    @movies = Movie.find_by_id(params[:id])
+    @movies.title = params[:title]
+    @movies.genre = params[:genre]
+    @movies.release_year = params[:content]
+    @movies.save
+    redirect to "/movies/#{@movies.id}"
+  end
+
   delete '/movies/:id/delete' do #delete action
     @movie = Movie.find_by_id(params[:id])
     @movie.delete
