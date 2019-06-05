@@ -1,8 +1,6 @@
 class MoviesController < ApplicationController
 
   get '/movies' do
-    # "You are logged in as #{session[:email]}"
-
     @movies = current_user.movies
     erb :"movies/movies.html"
   end
