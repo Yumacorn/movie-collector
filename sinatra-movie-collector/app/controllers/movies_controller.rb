@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
     @movie.release_year = params[:release_year]
     @movie.save
     binding.pry
-    erb :"/movies/:id/edit" #!!!!!!!!
+    erb :"movies/edit.html"
   end
 
   delete '/movies/:id/delete' do #delete action
